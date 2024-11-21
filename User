@@ -126,4 +126,369 @@ TweenTitleFrame2:Play() wait(0.3)
 TweenFrame2:Play() task.wait(1) 
 ProjectCredits:Destroy() 
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/redopy7/GG/refs/heads/main/project"))()
+local KeyGuardLibrary = loadstring(game:HttpGet("https://cdn.keyguardian.org/library/v1.0.0.lua"))()
+local trueData = "430eabeaa3e74b1c976fc196bba89df0"
+local falseData = "f083434cd46f46089e421a2f32ee4c2d"
+
+KeyGuardLibrary.Set({
+  publicToken = "dd323b26c82f47edb787f0048daf0ba5",
+  privateToken = "a923755d9dea4dd89ccc3da00882039b",
+  trueData = trueData,
+  falseData = falseData,
+})
+
+getgenv().Minimized = false
+
+local ProjectClxty = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local FrameCorner = Instance.new("UICorner")
+local TitleFrame = Instance.new("Frame")
+local TitleFrameCorner = Instance.new("UICorner")
+local Close = Instance.new("TextButton")
+local Minimized = Instance.new("TextButton")
+local Title = Instance.new("TextLabel")
+local Enter = Instance.new("TextBox")
+local EnterCorner = Instance.new("UICorner")
+local CheckKey = Instance.new("TextButton")
+local CheckKeyCorner = Instance.new("UICorner")
+local Discord = Instance.new("TextButton")
+local DiscordCorner = Instance.new("UICorner")
+local GetKey = Instance.new("TextButton")
+local GetKeyCorner = Instance.new("UICorner")
+
+ProjectClxty.Name = "ProjectClxty"
+ProjectClxty.Parent = game.CoreGui
+ProjectClxty.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ProjectClxty.ResetOnSpawn = false
+
+Frame.Parent = ProjectClxty
+Frame.Transparency = 1
+Frame.BackgroundColor3 = Color3.fromRGB(10, 10, 10)
+Frame.AnchorPoint = Vector2.new(0.5, 0.5)
+Frame.Position = UDim2.new(0.5, 0, 0.5, 0)
+Frame.BackgroundTransparency = 1
+Frame.Size = UDim2.new(0, 380, 0, 240)
+Frame.Active = true
+Frame.Visible = true
+Frame.Draggable = false
+
+FrameCorner.Parent = Frame
+FrameCorner.CornerRadius = UDim.new(0, 5)
+
+Enter.Name = "Enter"
+Enter.Parent = Frame
+Enter.Transparency = 1
+Enter.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+Enter.AnchorPoint = Vector2.new(0.5, 0.5)
+Enter.Size = UDim2.new(0, 300, 0, 40)
+Enter.Font = Enum.Font.Cartoon
+Enter.Position = UDim2.new(0.5, 0, 0.38, 0)
+Enter.Text = ""
+Enter.PlaceholderText = "Enter text here"
+Enter.TextColor3 = Color3.fromRGB(255,255,255)
+Enter.TextSize = 18
+
+EnterCorner.Parent = Enter
+EnterCorner.CornerRadius = UDim.new(0, 5)
+
+TitleFrame.Parent = Frame
+TitleFrame.Transparency = 1
+TitleFrame.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+TitleFrame.AnchorPoint = Vector2.new(0.0, 0.0)
+TitleFrame.Position = UDim2.new(0, 0, 0, 0)
+TitleFrame.BackgroundTransparency = 1
+TitleFrame.Size = UDim2.new(0, 380, 0, 50)
+TitleFrame.Active = true
+TitleFrame.Visible = true
+TitleFrame.Draggable = false
+
+TitleFrameCorner.Parent = TitleFrame
+TitleFrameCorner.CornerRadius = UDim.new(0, 5)
+
+Title.Parent = TitleFrame
+Title.Transparency = 0
+Title.BackgroundTransparency = 1
+Title.BackgroundColor3 = Color3.fromRGB(0,0,0)
+Title.Size = UDim2.new(0,0,0,50)
+Title.Font = Enum.Font.Cartoon
+Title.Position = UDim2.new(0.025, 0, 0, 0)
+Title.Text = "Kalitor - Key System"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextSize = 25
+Title.TextTransparency = 1
+Title.Visible = true
+Title.TextXAlignment = Enum.TextXAlignment.Left
+
+GetKey.Name = "GetKey"
+GetKey.Parent = Frame
+GetKey.Transparency = 1
+GetKey.BackgroundTransparency = 1
+GetKey.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+GetKey.BorderColor3 = Color3.new(255,255,255)
+GetKey.AnchorPoint = Vector2.new(0.5, 0.5)
+GetKey.Position = UDim2.new(0.261, 0, 0.5891, 0)
+GetKey.Size = UDim2.new(0, 120, 0, 40)
+GetKey.Font = Enum.Font.Cartoon
+GetKey.Text = "Get Key"
+GetKey.TextColor3 = Color3.fromRGB(255, 255, 255)
+GetKey.Visible = true
+GetKey.TextSize = 20
+
+GetKeyCorner.Parent = GetKey
+GetKeyCorner.CornerRadius = UDim.new(0, 5)
+
+CheckKey.Name = "Check Key"
+CheckKey.Parent = Frame
+CheckKey.Transparency = 1
+CheckKey.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+CheckKey.AnchorPoint = Vector2.new(0.5, 0.5)
+CheckKey.Position = UDim2.new(0.737, 0, 0.5891, 0)
+CheckKey.Size = UDim2.new(0, 120, 0, 40)
+CheckKey.Font = Enum.Font.Cartoon
+CheckKey.Text = "Check Key"
+CheckKey.TextColor3 = Color3.fromRGB(255, 255, 255)
+CheckKey.TextScaled = false
+CheckKey.TextSize = 20
+CheckKey.TextWrapped = true
+CheckKey.Visible = true
+
+CheckKeyCorner.Parent = CheckKey
+CheckKeyCorner.CornerRadius = UDim.new(0, 5) 
+
+Discord.Name = "Discord"
+Discord.Parent = Frame
+Discord.Transparency = 1
+Discord.BackgroundColor3 = Color3.fromRGB(114, 137, 218)
+Discord.AnchorPoint = Vector2.new(0.5, 0.5)
+Discord.Position = UDim2.new(0.5, 0, 0.8, 0)
+Discord.Size = UDim2.new(0, 300, 0, 40)
+Discord.Font = Enum.Font.Cartoon
+Discord.Text = "Discord Server"
+Discord.TextColor3 = Color3.fromRGB(255, 255, 255)
+Discord.TextScaled = false
+Discord.TextSize = 20
+Discord.TextWrapped = true
+Discord.Visible = true
+
+DiscordCorner.Parent = Discord
+DiscordCorner.CornerRadius = UDim.new(0, 5) 
+
+Close.Name = "Close"
+Close.Parent = TitleFrame
+Close.BackgroundColor3 = Color3.fromRGB(0,0,0) 
+Close.Transparency = 0
+Close.BackgroundTransparency = 1
+Close.AnchorPoint = Vector2.new(0, 0)
+Close.Position = UDim2.new(0.87, 0, 0.115592018391, 0)
+Close.Size = UDim2.new(0, 40, 0, 40)
+Close.Font = Enum.Font.Cartoon
+Close.Text = "X"
+Close.TextTransparency = 1
+Close.TextColor3 = Color3.fromRGB(255, 255, 255)
+Close.TextScaled = false
+Close.TextSize = 30
+Close.TextWrapped = true
+Close.Visible = true
+
+Minimized.Name = "Minimized"
+Minimized.Parent = TitleFrame
+Minimized.BackgroundColor3 = Color3.fromRGB(0,0,0) 
+Minimized.Transparency = 0
+Minimized.BackgroundTransparency = 1
+Minimized.AnchorPoint = Vector2.new(0, 0)
+Minimized.Position = UDim2.new(0.76, 0, 0.115592018391, 0)
+Minimized.Size = UDim2.new(0, 40, 0, 40)
+Minimized.Font = Enum.Font.Cartoon
+Minimized.Text = "-"
+Minimized.TextTransparency = 1
+Minimized.TextColor3 = Color3.fromRGB(255, 255, 255)
+Minimized.TextScaled = false
+Minimized.TextSize = 40
+Minimized.TextWrapped = true
+Minimized.Visible = true
+
+-- script
+-- FADING FOR FRAME 
+local time = 1
+local TweenFrame1 = game:GetService("TweenService"):Create(Frame, TweenInfo.new(time), {Transparency = 0})
+local time = 1
+local TweenFrame2 = game:GetService("TweenService"):Create(Frame, TweenInfo.new(time), {Transparency = 1})
+local TweenFrame3 = game:GetService("TweenService"):Create(Frame, TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(0, 380, 0, 50)}) 
+local TweenFrame4 = game:GetService("TweenService"):Create(Frame, TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(0, 380, 0, 240)})
+
+
+local time = 0.5
+-- FADING FOR CHECKKEY
+local TweenCheckKey1 = game:GetService("TweenService"):Create(CheckKey, TweenInfo.new(time), {Transparency = 0})
+local TweenCheckKey2 = game:GetService("TweenService"):Create(CheckKey, TweenInfo.new(time), {Transparency = 1})
+
+-- FADING FOR GETKEY
+local TweenGetKey1 = game:GetService("TweenService"):Create(GetKey, TweenInfo.new(time), {Transparency = 0})
+local TweenGetKey2 = game:GetService("TweenService"):Create(GetKey, TweenInfo.new(time), {Transparency = 1})
+
+-- FADING FOR Discord
+local TweenDiscord1 = game:GetService("TweenService"):Create(Discord, TweenInfo.new(time), {Transparency = 0})
+local TweenDiscord2 = game:GetService("TweenService"):Create(Discord, TweenInfo.new(time), {Transparency = 1})
+
+-- FADING FOR ENTER
+local TweenEnter1 = game:GetService("TweenService"):Create(Enter, TweenInfo.new(time), {Transparency = 0})
+local TweenEnter2 = game:GetService("TweenService"):Create(Enter, TweenInfo.new(time), {Transparency = 1})
+
+-- FADING FOR TITLE FRAME
+local TweenTitleFrame1 = game:GetService("TweenService"):Create(TitleFrame, TweenInfo.new(time), {Transparency = 0})
+local TweenTitleText1 = game:GetService("TweenService"):Create(Title, TweenInfo.new(time), {TextTransparency = 0})
+local TweenTitleText2 = game:GetService("TweenService"):Create(Title, TweenInfo.new(time), {TextTransparency = 1})
+local TweenTitleFrame2 = game:GetService("TweenService"):Create(TitleFrame, TweenInfo.new(time), {Transparency = 1})
+
+-- FADING FOR BUTTON TEXT
+local TweenButtonText1 = game:GetService("TweenService"):Create(GetKey, TweenInfo.new(time), {TextTransparency = 0})
+local TweenButtonText2 = game:GetService("TweenService"):Create(GetKey, TweenInfo.new(time), {TextTransparency = 1})
+
+-- FADING FOR ENTER TEXT
+local TweenEnterText1 = game:GetService("TweenService"):Create(Enter, TweenInfo.new(time), {TextTransparency = 0})
+local TweenEnterText2 = game:GetService("TweenService"):Create(Enter, TweenInfo.new(time), {TextTransparency = 1})
+
+-- FADING FOR GETKEY TEXT COLOR
+local TweenGetKeyTextColor1 = game:GetService("TweenService"):Create(GetKey, TweenInfo.new(time), { TextColor3 = Color3.fromRGB(0, 0, 0) })
+local TweenGetKeyTextColor2 = game:GetService("TweenService"):Create(GetKey, TweenInfo.new(time), { TextColor3 = Color3.fromRGB(0, 255, 0) })
+
+-- FADING FOR ENTER TEXT COLOR
+local TweenEnterTextColor1 = game:GetService("TweenService"):Create(Enter, TweenInfo.new(time), { TextColor3 = Color3.fromRGB(255, 255, 255) })
+local TweenEnterTextColor2 = game:GetService("TweenService"):Create(Enter, TweenInfo.new(time), { TextColor3 = Color3.fromRGB(0, 255, 0) })
+local TweenEnterTextColor3 = game:GetService("TweenService"):Create(Enter, TweenInfo.new(time), { TextColor3 = Color3.fromRGB(255, 0, 0) })
+
+-- FADING FOR CLOSE BUTTON
+local TweenClose1 = game:GetService("TweenService"):Create(Close, TweenInfo.new(time), {TextTransparency = 0})
+local TweenClose2 = game:GetService("TweenService"):Create(Close, TweenInfo.new(time), {TextTransparency = 1})
+
+-- FADING FOR Minimized BUTTON
+local TweenMinimized1 = game:GetService("TweenService"):Create(Minimized, TweenInfo.new(time), {TextTransparency = 0})
+local TweenMinimized2 = game:GetService("TweenService"):Create(Minimized, TweenInfo.new(time), {TextTransparency = 1})
+
+Discord.MouseButton1Click:Connect(function()
+  Discord.TextColor3 = Color3.fromRGB(0, 255, 0)
+    Discord.Text = "Copied!" 
+    wait(1) 
+    Discord.TextColor3 = Color3.fromRGB(255, 255, 255)
+    Discord.Text = "Discord" 
+    setclipboard("https://Discord.gg/rw4YzxnUhp")
+end)
+
+GetKey.MouseButton1Click:Connect(function()
+  GetKey.TextColor3 = Color3.fromRGB(0, 255, 0)
+    GetKey.Text = "Copied!" 
+    wait(1) 
+    GetKey.TextColor3 = Color3.fromRGB(255, 255, 255)
+    GetKey.Text = "Get Key" 
+    setclipboard(KeyGuardLibrary.getLink())
+end)
+
+CheckKey.MouseButton1Click:Connect(function() 
+  local key = Enter.Text
+  local response = KeyGuardLibrary.validateDefaultKey(key)
+        if response == trueData then
+     TweenEnterText2:Play() task.wait(0.2)
+     TweenEnterTextColor2:Play() task.wait(0.3)
+     Enter.Text = "Valid Key"
+     TweenEnterText1:Play() task.wait(1)
+     
+    TweenEnter2:Play() 
+    TweenGetKey2:Play() 
+    TweenCheckKey2:Play() 
+    TweenDiscord2:Play()
+    TweenTitleText2:Play() 
+    TweenMinimized2:Play() 
+    TweenClose2:Play() wait(0.3)
+    TweenTitleFrame2:Play() 
+    TweenFrame2:Play() task.wait(1)
+    ProjectClxty:Destroy() 
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/redopy7/Blade-Ball/refs/heads/main/Kalitor"))()
+    else 
+     TweenEnterText2:Play() task.wait(0.2)
+     TweenEnterTextColor3:Play() task.wait(0.3)
+     Enter.Text = "Invalid Key"
+     TweenEnterText1:Play() task.wait(1.2)
+     TweenEnterText2:Play() task.wait(0.3) 
+     TweenEnterTextColor1:Play() task.wait(0.2)
+     Enter.Text = ""
+     TweenEnterText1:Play() task.wait(0) 
+    end
+end)
+
+Discord.MouseButton1Click:Connect(function()
+  Discord.TextColor3 = Color3.fromRGB(0, 255, 0)
+    Discord.Text = "Copied!" 
+    wait(1) 
+    Discord.TextColor3 = Color3.fromRGB(255, 255, 255)
+    Discord.Text = "Discord" 
+    setclipboard("https://Discord.gg/rw4YzxnUhp")
+end)
+
+Close.MouseButton1Click:Connect(function()
+  TweenEnter2:Play() 
+    TweenGetKey2:Play() 
+    TweenCheckKey2:Play() 
+    TweenDiscord2:Play()
+    TweenTitleText2:Play() 
+    TweenMinimized2:Play() 
+    TweenClose2:Play() wait(0.3)
+    TweenTitleFrame2:Play() 
+    TweenFrame2:Play() task.wait(1)
+  ProjectClxty:Destroy()
+end) 
+
+local function MinimizedClose()
+    TweenEnter2:Play()
+    task.wait(0.1)
+    TweenGetKey2:Play()
+    task.wait(0.15)
+    TweenCheckKey2:Play()
+    task.wait(0.2) 
+    TweenDiscord2:Play()
+    task.wait(0.25) 
+    TweenFrame3:Play() 
+    
+    local TweenSizeGetKey1 = game:GetService("TweenService"):Create(GetKey, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(0, 0, 0, 0)}):Play()
+    local TweenSizeCheckKey1 = game:GetService("TweenService"):Create(CheckKey, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(0, 0, 0, 0)}):Play()
+    local TweenSizeDiscord1 = game:GetService("TweenService"):Create(Discord, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(0, 0, 0, 0)}):Play()
+    local TweenSizeEnter1 = game:GetService("TweenService"):Create(Enter, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(0, 0, 0, 0)}):Play() 
+end 
+
+local function MinimizedOpen() 
+    TweenFrame4:Play() 
+    local TweenSizeGetKey2 = game:GetService("TweenService"):Create(GetKey, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(0, 120, 0, 40)}):Play()
+    local TweenSizeCheckKey2 = game:GetService("TweenService"):Create(CheckKey, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(0, 120, 0, 40)}):Play()
+    local TweenSizeDiscord2 = game:GetService("TweenService"):Create(Discord, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(0, 300, 0, 40)}):Play()
+    local TweenSizeEnter2 = game:GetService("TweenService"):Create(Enter, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(0, 300, 0, 40)}):Play() 
+    task.wait(0.25)
+    TweenEnter1:Play()
+    task.wait(0.2)
+    TweenGetKey1:Play()
+    task.wait(0.15)
+    TweenCheckKey1:Play()
+    task.wait(0.1)
+    TweenDiscord1:Play()
+end
+
+local minimized = false 
+
+Minimized.MouseButton1Click:Connect(
+		function()
+			if minimized == false then
+				MinimizedClose()
+			else
+				MinimizedOpen()
+			end
+			minimized = not minimized
+		end
+	)
+
+TweenFrame1:Play() task.wait(0.3)
+TweenTitleFrame1:Play() task.wait(0.3)
+TweenTitleText1:Play() task.wait(0.3)
+TweenGetKey1:Play() 
+TweenCheckKey1:Play() 
+TweenDiscord1:Play()
+TweenEnter1:Play() 
+TweenMinimized1:Play() 
+TweenClose1:Play() 
