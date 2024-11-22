@@ -497,7 +497,7 @@ CheckKey.MouseButton1Click:Connect(function()
     TweenTitleFrame2:Play() 
     TweenFrame2:Play() task.wait(1)
     ProjectClxty:Destroy() 
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/redopy7/Blade-Ball/refs/heads/main/Kalitor"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/redopy7/kaka/refs/heads/main/xaxaxa"))()
     else 
      TweenEnterText2:Play() task.wait(0.2)
      TweenEnterTextColor3:Play() task.wait(0.3)
