@@ -126,115 +126,10 @@ TweenTitleFrame2:Play() wait(0.3)
 TweenFrame2:Play() task.wait(1) 
 ProjectCredits:Destroy() 
 
-local key = "Kalitor_Am82BUEAU8jLwGwWFA"
-
-local ProjectClxty = Instance.new("ScreenGui")
-local Frame = Instance.new("Frame")
-local FrameCorner = Instance.new("UICorner")
-local TitleFrame = Instance.new("Frame")
-local TitleFrameCorner = Instance.new("UICorner")
-local Close = Instance.new("TextButton")
-local Minimized = Instance.new("TextButton")
-local Title = Instance.new("TextLabel")
-local Enter = Instance.new("TextBox")
-local EnterCorner = Instance.new("UICorner")
-local CheckKey = Instance.new("TextButton")
-local CheckKeyCorner = Instance.new("UICorner")
-local Discord = Instance.new("TextButton")
-local DiscordCorner = Instance.new("UICorner")
-local GetKey = Instance.new("TextButton")
-local GetKeyCorner = Instance.new("UICorner")
-
-ProjectClxty.Name = "ProjectClxty"
-ProjectClxty.Parent = game.CoreGui
-ProjectClxty.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-ProjectClxty.ResetOnSpawn = false
-
-Frame.Parent = ProjectClxty
-Frame.Transparency = 1
-Frame.BackgroundColor3 = Color3.fromRGB(10, 10, 10)
-Frame.AnchorPoint = Vector2.new(0.5, 0.5)
-Frame.Position = UDim2.new(0.5, 0, 0.5, 0)
-Frame.BackgroundTransparency = 1
-Frame.Size = UDim2.new(0, 380, 0, 240)
-Frame.Active = true
-Frame.Visible = true
-Frame.Draggable = false
-
-FrameCorner.Parent = Frame
-FrameCorner.CornerRadius = UDim.new(0, 5)
-
-Enter.Name = "Enter"
-Enter.Parent = Frame
-Enter.Transparency = 1
-Enter.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-Enter.AnchorPoint = Vector2.new(0.5, 0.5)
-Enter.Size = UDim2.new(0, 300, 0, 40)
-Enter.Font = Enum.Font.Cartoon
-Enter.Position = UDim2.new(0.5, 0, 0.38, 0)
-Enter.Text = ""
-Enter.PlaceholderText = "Enter text here"
-Enter.TextColor3 = Color3.fromRGB(255,255,255)
-Enter.TextSize = 18
-
-EnterCorner.Parent = Enter
-EnterCorner.CornerRadius = UDim.new(0, 5)
-
-TitleFrame.Parent = Frame
-TitleFrame.Transparency = 1
-TitleFrame.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-TitleFrame.AnchorPoint = Vector2.new(0.0, 0.0)
-TitleFrame.Position = UDim2.new(0, 0, 0, 0)
-TitleFrame.BackgroundTransparency = 1
-TitleFrame.Size = UDim2.new(0, 380, 0, 50)
-TitleFrame.Active = true
-TitleFrame.Visible = true
-TitleFrame.Draggable = false
-
-TitleFrameCorner.Parent = TitleFrame
-TitleFrameCorner.CornerRadius = UDim.new(0, 5)
-
-Title.Parent = TitleFrame
-Title.Transparency = 0
-Title.BackgroundTransparency = 1
-Title.BackgroundColor3 = Color3.fromRGB(0,0,0)
-Title.Size = UDim2.new(0,0,0,50)
-Title.Font = Enum.Font.Cartoon
-Title.Position = UDim2.new(0.025, 0, 0, 0)
-Title.Text = "Kalitor - Key System"
-Title.TextColor3 = Color3.fromRGB(255, 255, 255)
-Title.TextSize = 25
-Title.TextTransparency = 1
-Title.Visible = true
-Title.TextXAlignment = Enum.TextXAlignment.Left
-
-GetKey.Name = "GetKey"
-GetKey.Parent = Frame
-GetKey.Transparency = 1
-GetKey.BackgroundTransparency = 1
-GetKey.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-GetKey.BorderColor3 = Color3.new(255,255,255)
-GetKey.AnchorPoint = Vector2.new(0.5, 0.5)
-GetKey.Position = UDim2.new(0.261, 0, 0.5891, 0)
-GetKey.Size = UDim2.new(0, 120, 0, 40)
-GetKey.Font = Enum.Font.Cartoon
-GetKey.Text = "Get Key"
-GetKey.TextColor3 = Color3.fromRGB(255, 255, 255)
-GetKey.Visible = true
-GetKey.TextSize = 20
-
-GetKeyCorner.Parent = GetKey
-GetKeyCorner.CornerRadius = UDim.new(0, 5)
-
-CheckKey.Name = "Check Key"
-CheckKey.Parent = Frame
-CheckKey.Transparency = 1
-CheckKey.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-CheckKey.AnchorPoint = Vector2.new(0.5, 0.5)
-CheckKey.Position = UDim2.new(0.737, 0, 0.5891, 0)
-CheckKey.Size = UDim2.new(0, 120, 0, 40)
-CheckKey.Font = Enum.Font.Cartoon
-local key = "Kalitor_Am82BUEAU8jLwGwWFA"
+local key = {
+  "Kalitor_Am82BUEAU8jLwGwWFA",
+  "Kalitor_Fg1HcFX57oXK5ZprsH"
+}
 
 local ProjectClxty = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
@@ -481,32 +376,52 @@ GetKey.MouseButton1Click:Connect(function()
 end)
 
 CheckKey.MouseButton1Click:Connect(function() 
-        if Enter.Text == key then
-     TweenEnterText2:Play() task.wait(0.2)
-     TweenEnterTextColor2:Play() task.wait(0.3)
-     Enter.Text = "Valid Key"
-     TweenEnterText1:Play() task.wait(1)
-     
-    TweenEnter2:Play() 
-    TweenGetKey2:Play() 
-    TweenCheckKey2:Play() 
-    TweenDiscord2:Play()
-    TweenTitleText2:Play() 
-    TweenMinimized2:Play() 
-    TweenClose2:Play() wait(0.3)
-    TweenTitleFrame2:Play() 
-    TweenFrame2:Play() task.wait(1)
-    ProjectClxty:Destroy() 
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/redopy7/kaka/refs/heads/main/xaxaxa"))()
+    local match = false
+
+    for _, v in ipairs(key) do
+        if Enter.Text == v then
+            match = true
+            break
+        end
+    end
+
+    if match then
+        TweenEnterText2:Play()
+        task.wait(0.2)
+        TweenEnterTextColor2:Play()
+        task.wait(0.3)
+        Enter.Text = "Valid Key"
+        TweenEnterText1:Play()
+        task.wait(1)
+
+        TweenEnter2:Play() 
+        TweenGetKey2:Play() 
+        TweenCheckKey2:Play() 
+        TweenDiscord2:Play()
+        TweenTitleText2:Play() 
+        TweenMinimized2:Play() 
+        TweenClose2:Play()
+        wait(0.3)
+        TweenTitleFrame2:Play() 
+        TweenFrame2:Play()
+        task.wait(1)
+        ProjectClxty:Destroy()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/redopy7/kaka/refs/heads/main/xaxaxa"))()
     else 
-     TweenEnterText2:Play() task.wait(0.2)
-     TweenEnterTextColor3:Play() task.wait(0.3)
-     Enter.Text = "Invalid Key"
-     TweenEnterText1:Play() task.wait(1.2)
-     TweenEnterText2:Play() task.wait(0.3) 
-     TweenEnterTextColor1:Play() task.wait(0.2)
-     Enter.Text = ""
-     TweenEnterText1:Play() task.wait(0) 
+        TweenEnterText2:Play()
+        task.wait(0.2)
+        TweenEnterTextColor3:Play()
+        task.wait(0.3)
+        Enter.Text = "Invalid Key"
+        TweenEnterText1:Play()
+        task.wait(1.2)
+        TweenEnterText2:Play()
+        task.wait(0.3) 
+        TweenEnterTextColor1:Play()
+        task.wait(0.2)
+        Enter.Text = ""
+        TweenEnterText1:Play()
+        task.wait(0) 
     end
 end)
 
