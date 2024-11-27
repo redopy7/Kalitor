@@ -362,7 +362,7 @@ Discord.MouseButton1Click:Connect(function()
 end)
 
 GetKey.MouseButton1Click:Connect(function()
-  setclipboard("https://direct-link.net/477673/kalitorkey")
+  setclipboard("https://bit.ly/49alVN4")
   GetKey.TextColor3 = Color3.fromRGB(0, 255, 0)
     GetKey.Text = "Copied!" 
     wait(1) 
