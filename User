@@ -362,7 +362,7 @@ Discord.MouseButton1Click:Connect(function()
 end)
 
 GetKey.MouseButton1Click:Connect(function()
-  setclipboard("https://bit.ly/49alVN4")
+  setclipboard("https://kazura.vercel.app/")
   GetKey.TextColor3 = Color3.fromRGB(0, 255, 0)
     GetKey.Text = "Copied!" 
     wait(1) 
