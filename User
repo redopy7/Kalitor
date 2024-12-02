@@ -371,7 +371,7 @@ GetKey.MouseButton1Click:Connect(function()
 end)
 
 local key = {
-  "VatHYotJxtWpSwnonC33nutfxk"
+  "NdjsgnGBE9JX6zAYMcdicwYgdt"
 }
 
 CheckKey.MouseButton1Click:Connect(function() 
